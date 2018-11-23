@@ -25,6 +25,6 @@ def witaj(name, sex):
 
 
 imie = input('What is your name? ')
-plec = input('What is your sex? ')
+pl = input('What is your sex? ')
 
-witaj(imie, plec)
+witaj(imie, pl)
