@@ -24,7 +24,7 @@ def witaj(name, sex):
     print('-------------------')
 
 
-imie = input('What\'s your name? ')
-plec = input('What\'s your sex? ')
+imie = input('What is your name? ')
+plec = input('What is your sex? ')
 
 witaj(imie, plec)
