@@ -1,0 +1,11 @@
+num1 = input("Your first number: ")
+num2 = input("Your second number: ")
+suma = float(num1) + float(num2)
+roznica = float(num1) - float(num2)
+iloczyn = float(num1) * float(num2)
+iloraz = float(num1) / float(num2)
+
+print("\n" + num1 + " + " + num2 + " =", str(suma))
+print("\n" + num1 + " - " + num2 + " =", str(roznica))
+print("\n" + num1 + " * " + num2 + " =", str(iloczyn))
+print("\n" + num1 + " / " + num2 + " =", str(iloraz))
