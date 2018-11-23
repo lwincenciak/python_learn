@@ -1,4 +1,4 @@
-friends = ["Freddie", "Brian", "Roger", "John", "Mary", "Roger"]
+friends = ["Freddie", "Brian", "Roger", "John", "Mary", "Roger", "Jim"]
 print(friends)
 print(friends[1])
 print(friends[-1])
