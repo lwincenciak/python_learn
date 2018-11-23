@@ -5,7 +5,7 @@ b = input("b = ")
 c = input("c = ")
 delta = float(b) * float(b) - 4 * float(a) * float(c)
 print("\nRownanie kwadratowe: " + a + "x^2 + " + b + "x + " + c + " = 0")
-print("Delta =" + str(delta))
+print("Delta = " + str(delta))
 
 if delta < 0:
     print('Rownanie nie ma pierwiastkow.')
