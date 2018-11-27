@@ -1,6 +1,6 @@
 # open("badge.csv", "r")
 # modes:    r - read
-#           w - write
+#           w - write (overwrites the file if it exists)
 #           a - append
 #           r+ - read and write
 # opened files must be closed
