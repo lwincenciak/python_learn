@@ -14,16 +14,19 @@ def kropki(num):
     my_print(".")
     rest = int(num) % 50
     if rest == 0:
-        print("")
+        print(" " + str(num))
 
+
+dice_throws = 1000
+iterations = 300
 
 dice = []
 dice_file = open("dice_mc.txt", "w")
 dice_file.write("Average;Std\n")
 dice_file = open("dice_mc.txt", "a")
 
-for z in range(100):
-    for i in range(5000):
+for z in range(iterations):
+    for i in range(dice_throws):
         # print("Rolling dice " + str(i))
         # print(ut.roll_dice(6))
         dice.append(ut.roll_dice(6))
@@ -37,11 +40,11 @@ for z in range(100):
     kropki(z + 1)
 
 dice_file.close()
-
-print("\n")
-dice_file = open("dice_mc.txt", "r")
-print(dice_file.read())
-dice_file.close()
+print("\nOutput written to file: dice_mc.txt")
+# print("\n")
+# dice_file = open("dice_mc.txt", "r")
+# print(dice_file.read())
+# dice_file.close()
 
 # print(ut.queen)
 
