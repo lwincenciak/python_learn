@@ -6,7 +6,7 @@ import sys
 import random
 import matplotlib.pyplot as plt
 import csv
-# from matplotlib.ticker import AutoMinorLocator, MultipleLocator, FuncFormatter
+from matplotlib.ticker import AutoMinorLocator, MultipleLocator, FuncFormatter
 
 
 def roll_dice(number):
@@ -35,7 +35,7 @@ def minor_tick(x, pos):
 
 
 dice_throws = 2400
-iterations = 1000
+iterations = 500
 
 dice_file = open("dice_mc.csv", "w")
 # dice_file.write("Average;Std\n")
@@ -78,30 +78,16 @@ with open('dice_mc.csv', 'r') as csvfile:
         x.append(int(row[0]))
         y.append(float(row[1]))
 
-# fig = plt.figure(figsize=(12, 5))
-# fig = plt.figure(figsize=(10, 1))
-# ax = fig.add_subplot(1, 1, 1, aspect=1)
-
-# ax.xaxis.set_major_locator(MultipleLocator(100))
-# ax.xaxis.set_minor_locator(AutoMinorLocator(10))
-# ax.yaxis.set_major_locator(MultipleLocator(1))
-# ax.yaxis.set_minor_locator(AutoMinorLocator(1))
-# ax.xaxis.set_minor_formatter(FuncFormatter(minor_tick))
-
-# ax.set_xlim(0, iterations)
-# ax.set_ylim(0, 6)
-
-# ax.tick_params(which='major', width=1.0)
-# ax.tick_params(which='major', length=10)
-# ax.tick_params(which='minor', width=1.0, labelsize=10)
-# ax.tick_params(which='minor', length=5, labelsize=10, labelcolor='0.25')
-
-# ax.grid(linestyle="--", linewidth=0.5, color='.25', zorder=-10)
-
+plt.figure(figsize=(20, 8))
+plt.xlim(0, iterations)
+plt.ylim(3.35, 3.65)
 plt.plot(x, y, label='Average score')
-plt.xlabel('Iteration')
-plt.ylabel('Average score')
+plt.xlabel('Iteration', size=20)
+plt.ylabel('Average score', size=20)
 plt.title('Simulation of ' + str(dice_throws) +
-          ' throws of a dice\nRepeated ' + str(iterations) + ' times')
+          ' throws of a dice\nRepeated ' + str(iterations) + ' times', size=20)
 plt.legend()
+plt.xticks(size=20)
+plt.yticks(size=20)
+plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
 plt.show()

@@ -1,9 +1,9 @@
 friends = ["Freddie", "Brian", "Roger", "John", "Mary", "Roger", "Jim"]
 print(friends)
-print(friends[1])
-print(friends[-1])
-print(friends[1:])
-print(friends[1:3])
+print(friends[1])  # [index] starts with 0
+print(friends[-1])  # last element
+print(friends[1:])  # lists elements from index 1 to end
+print(friends[1:3])  # list elements from index 1 to 3 not including 3
 friends[0] = "Mercury"
 print(friends[0])
 friends[0] = "Freddie"
@@ -23,5 +23,5 @@ friends2 = friends.copy()
 print(friends)
 print(friends2)
 print(lucky_numbers)
-friends.pop()
-friends.clear()
+friends.pop()  # delete last element
+friends.clear()  # delete all elements

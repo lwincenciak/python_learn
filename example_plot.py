@@ -6,12 +6,12 @@ from matplotlib.ticker import AutoMinorLocator, MultipleLocator, FuncFormatter
 np.random.seed(19680801)
 
 X = np.linspace(0, 10, 100)
-Y1 = 3+np.cos(X)
-Y2 = 1+np.cos(1+X/0.75)/2
+Y1 = 3 + np.cos(X)
+Y2 = 1 + np.cos(1 + X / 0.75) / 2
 Y3 = np.random.uniform(Y1, Y2, len(X))
 
-fig = plt.figure(figsize=(8, 8))
-ax = fig.add_subplot(1, 1, 1, aspect=1)
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(1, 1, 1, aspect=0.75)
 
 
 def minor_tick(x, pos):
