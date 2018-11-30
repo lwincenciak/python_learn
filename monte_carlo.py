@@ -6,6 +6,10 @@ import sys
 import random
 import matplotlib.pyplot as plt
 import csv
+<<<<<<< HEAD
+=======
+# from matplotlib.ticker import AutoMinorLocator, MultipleLocator, FuncFormatter
+>>>>>>> 5f42b5559d6c984e86e63b2b727533e72c1e18a8
 
 
 def roll_dice(number):
@@ -34,7 +38,7 @@ def minor_tick(x, pos):
 
 
 dice_throws = 2400
-iterations = 500
+iterations = 1000
 
 dice_file = open("dice_mc.csv", "w")
 # dice_file.write("Average;Std\n")
@@ -77,16 +81,22 @@ with open('dice_mc.csv', 'r') as csvfile:
         x.append(int(row[0]))
         y.append(float(row[1]))
 
-plt.figure(figsize=(20, 8))
+plt.rcParams.update({'font.size': 12})
+
+fig = plt.figure(figsize=(18, 8))
 plt.xlim(0, iterations)
 plt.ylim(3.35, 3.65)
-plt.plot(x, y, label='Average score')
-plt.xlabel('Iteration', size=20)
-plt.ylabel('Average score', size=20)
+line1 = plt.plot(x, y, label='Average score')
+plt.setp(line1, linewidth=0.6, color='#0055FF')
+plt.xlabel('Iteration')
+plt.ylabel('Average score')
 plt.title('Simulation of ' + str(dice_throws) +
-          ' throws of a dice\nRepeated ' + str(iterations) + ' times', size=20)
+          ' throws of a dice\nRepeated ' + str(iterations) + ' times')
 plt.legend()
-plt.xticks(size=20)
-plt.yticks(size=20)
+plt.xticks()
+plt.yticks()
 plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
 plt.show()
+
+fig.savefig("dice_mc.pdf", bbox_inches='tight')
+fig.savefig("dice_mc.eps", bbox_inches='tight')
