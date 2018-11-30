@@ -53,7 +53,7 @@ def run_test(questions):
         print("Not bad, keep going!")
     elif score_perc < 90:
         print("Almost there!")
-    elif score_perc > 90 and score_perc < 100:
+    elif score_perc >= 90 and score_perc < 100:
         print("Almost perfect, dear!")
     elif score_perc == 100:
         print("You nailed it, darling!")
