@@ -13,6 +13,16 @@ question_prompts = [
     "He was the quiet one and turned to be our secret weapon. Who was it?\n(a) Roger Taylor\n(b) Brian May\n(c) John Deacon\n\nYour answer: ",
     "Freddie was born in:\n(a) London, UK\n(b) Zanzibar\n(c) Bombay, India\n\nYour answer: ",
     "Brian May built his own guitar using parts of:\n(a) a fireplace\n(b) a motorcycle springs\n(c) both\n\nYour answer: ",
+    "Song \"Sheer Heart Attack\" was released on the album:\n(a) Queen II\n(b) Sheer Heart Attack\n(c) News of the world\n\nYour answer: ",
+    "Which Queen album has the \'White side\' and the \'Black side\'?\n(a) Queen II\n(b) Sheer Heart Attack\n(c) Queen I\n\nYour answer: ",
+    "What was the last song recorded by Freddie Mercury?\n(a) The Show Must Go On\n(b) Mother Love\n(c) Made in Heaven\n\nYour answer: ",
+    "Which member of Queen has a Ph.D. in astrophysics?\n(a) Roger Taylor\n(b) Brian May\n(c) John Deacon\n\nYour answer: ",
+    "It's a kind of magic was written for the movie:\n(a) Metropolis\n(b) Iron Eagle\n(c) Highlander\n\nYour answer: ",
+    "Number 1 hit sigle in the USA was:\n(a) Another one bites the dust\n(b) We are the champions\n(c) Bohemian Rhapsody\n\nYour answer: ",
+    "Innuendo Spanish guitar solo was played by:\n(a) Al di Meola\n(b) Brian May\n(c) Steve Howe\n\nYour answer: ",
+    "Queen was officially established in:\n(a) 1968\n(b) 1970\n(c) 1973\n\nYour answer: ",
+    "The band in which May and Taylor started to play together was:\n(a) Smile\n(b) Humpy Bong\n(c) The Hectics\n\nYour answer: ",
+    "Queen at Live Aid concert was considered the best rock performance ever. It was in:\n(a) 1984\n(b) 1985\n(c) 1986\n\nYour answer: ",
 ]
 
 questions = [
@@ -26,6 +36,16 @@ questions = [
     Question(question_prompts[7], "c"),
     Question(question_prompts[8], "b"),
     Question(question_prompts[9], "c"),
+    Question(question_prompts[10], "c"),
+    Question(question_prompts[11], "a"),
+    Question(question_prompts[12], "b"),
+    Question(question_prompts[13], "b"),
+    Question(question_prompts[14], "c"),
+    Question(question_prompts[15], "a"),
+    Question(question_prompts[16], "c"),
+    Question(question_prompts[17], "b"),
+    Question(question_prompts[18], "a"),
+    Question(question_prompts[19], "b"),
 ]
 
 random.shuffle(questions)
@@ -62,11 +82,11 @@ def run_test(questions):
     elif score_perc < 80:
         print("Not bad, keep going, dear!")
     elif score_perc < 90:
-        print("Almost there, my dear!")
+        print("Impressive, my dear!")
     elif score_perc >= 90 and score_perc < 100:
         print("Almost perfect, dear!")
     elif score_perc == 100:
-        print("You nailed it, darling!")
+        print("You nailed it, darling! You are a true fan of Queen!")
 
 
 run_test(questions)
