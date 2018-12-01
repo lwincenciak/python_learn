@@ -54,15 +54,15 @@ def run_test(questions):
     print("You got " + str(score) + "/" + str(len(questions)) +
           " correct. This is " + format(score_perc, '.2f') + "%.")
     if score_perc < 30:
-        print("That's miserable...")
+        print("Oh dear, that's miserable...")
     elif score_perc < 50:
-        print("You know something, but need to learn a lot more...")
+        print("Darling, you need to learn a lot more...")
     elif score_perc < 65:
-        print("You know something, but need to learn more...")
+        print("You know something, but need to learn more, darling...")
     elif score_perc < 80:
-        print("Not bad, keep going!")
+        print("Not bad, keep going, dear!")
     elif score_perc < 90:
-        print("Almost there!")
+        print("Almost there, my dear!")
     elif score_perc >= 90 and score_perc < 100:
         print("Almost perfect, dear!")
     elif score_perc == 100:
