@@ -6,10 +6,7 @@ import sys
 import random
 import matplotlib.pyplot as plt
 import csv
-<<<<<<< HEAD
-=======
 # from matplotlib.ticker import AutoMinorLocator, MultipleLocator, FuncFormatter
->>>>>>> 5f42b5559d6c984e86e63b2b727533e72c1e18a8
 
 
 def roll_dice(number):

@@ -1,10 +1,11 @@
 from Question import Question
 import random
+import sys
 
 question_prompts = [
     "What is the name of a lead singer of Queen?\n(a) Freddie Mercury\n(b) Brian May\n(c) Roger Taylor\n\nYour answer: ",
-    "Who plays guitar in Queen?\n(a) Freddie Mercury\n(b) John Deacon\n(c) Brian May\n\nYour answer: ",
-    "Who plays bass in Queen?\n(a) Roger Taylor\n(b) John Deacon\n(c) Brian May\n\nYour answer: ",
+    "Who plays the lead guitar in Queen?\n(a) Freddie Mercury\n(b) John Deacon\n(c) Brian May\n\nYour answer: ",
+    "Who plays the bass guitar in Queen?\n(a) Roger Taylor\n(b) John Deacon\n(c) Brian May\n\nYour answer: ",
     "When was the Bohemian Rhapsody released?\n(a) 1974\n(b) 1975\n(c) 1976\n\nYour answer: ",
     "Which album was illustrated with a giant robot?\n(a) News of the world\n(b) Innuendo\n(c) The Game\n\nYour answer: ",
     "Who was Queen engineer in 1975?\n(a) Queen themselves\n(b) Reinhold Mack\n(c) Roy Thomas Baker\n\nYour answer: ",
@@ -30,16 +31,25 @@ questions = [
 random.shuffle(questions)
 
 
+def my_print(text):
+    sys.stdout.write(str(text))
+    sys.stdout.flush()
+
+
 def run_test(questions):
+    i = 1
     score = 0
     score_perc = 0
     for x in questions:
+        my_print(i)
+        my_print(". ")
         answer = input(x.prompt)
         if answer == x.answer:
             score += 1
             print("Correct!\n")
         else:
             print("Wrong!\n")
+        i += 1
     score_perc = 100 * (score / len(questions))
     print("You got " + str(score) + "/" + str(len(questions)) +
           " correct. This is " + format(score_perc, '.2f') + "%.")
