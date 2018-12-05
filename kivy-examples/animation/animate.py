@@ -1,3 +1,6 @@
+from kivy.uix.button import Button
+from kivy.app import App
+from kivy.animation import Animation
 '''
 Widget animation
 ================
@@ -9,10 +12,6 @@ an animation when clicked.
 
 import kivy
 kivy.require('1.0.7')
-
-from kivy.animation import Animation
-from kivy.app import App
-from kivy.uix.button import Button
 
 
 class TestApp(App):

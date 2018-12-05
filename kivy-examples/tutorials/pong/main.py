@@ -1,12 +1,11 @@
-import kivy
-kivy.require('1.1.1')
-
-from kivy.app import App
-from kivy.uix.widget import Widget
+from kivy.clock import Clock
+from kivy.vector import Vector
 from kivy.properties import NumericProperty, ReferenceListProperty,\
     ObjectProperty
-from kivy.vector import Vector
-from kivy.clock import Clock
+from kivy.uix.widget import Widget
+from kivy.app import App
+import kivy
+kivy.require('1.1.1')
 
 
 class PongPaddle(Widget):
