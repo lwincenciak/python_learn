@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 
 def silnia(n):
     if n > 1:
-        return n*silnia(n - 1)  # wywolanie rekurencyjne funkcji
+        return n * silnia(n - 1)  # wywolanie rekurencyjne funkcji
     elif n in (0, 1):
         return 1
 
 
 ts_length = 90
-b = 46/16  # Barcelona currently
+b = 46 / 16  # Barcelona currently
 
 # p_values = [0]  # empty list
 goals_list = [0, 1, 2, 3, 4]
@@ -20,7 +20,7 @@ colors = ['#0055DD', '#009933', '#FF6622', '#FF1122', '#880000']
 def poisson(g):
     p_values = []
     for t in range(ts_length + 1):
-        p = (np.exp(-(b/90)*t) * ((b/90)*t) ** g) / (silnia(g))
+        p = (np.exp(-(b / 90) * t) * ((b / 90) * t) ** g) / (silnia(g))
         p_values.append(p)
     return p_values
 
