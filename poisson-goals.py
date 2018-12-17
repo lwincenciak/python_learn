@@ -10,7 +10,7 @@ def silnia(n):
 
 
 ts_length = 90
-b = 3
+b = 46/16  # Barcelona currently
 
 # p_values = [0]  # empty list
 goals_list = [0, 1, 2, 3, 4]
@@ -34,13 +34,13 @@ plt.rcParams.update({'font.size': 14})
 i = 0
 for g in goals_list:
     x = poisson(g)
-    plt.plot(x, linewidth=1.5, color=colors[i], label='g = ' + str(g))
+    plt.plot(x, linewidth=2.5, color=colors[i], label='g = ' + str(g))
     i += 1
 
 plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
 plt.xlabel('Time [t]')
 plt.ylabel('')
-plt.title('Probability of scoring')
+plt.title('Probability of scoring by Barcelona\n given number of goals in a game')
 plt.legend()
 plt.show()
-# fig.savefig("tseries.pdf", bbox_inches='tight')
+fig.savefig("poisson.pdf")
