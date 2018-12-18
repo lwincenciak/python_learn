@@ -25,7 +25,7 @@ def poisson(g):
     return p_values
 
 
-fig = plt.figure(figsize=(10, 8))
+fig = plt.figure(figsize=(11, 8))
 plt.xlim(0, match_length)
 # plt.ylim(3.35, 3.65)
 
