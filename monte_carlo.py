@@ -34,7 +34,7 @@ def minor_tick(x, pos):
     return "%.2f" % x
 
 
-dice_throws = 2400
+dice_throws = 4800
 iterations = 1000
 
 dice_file = open("dice_mc.csv", "w")
@@ -80,9 +80,9 @@ with open('dice_mc.csv', 'r') as csvfile:
 
 plt.rcParams.update({'font.size': 12})
 
-fig = plt.figure(figsize=(18, 8))
+fig = plt.figure(figsize=(12, 8))
 plt.xlim(0, iterations)
-plt.ylim(3.35, 3.65)
+#plt.ylim(3.40, 3.60)
 line1 = plt.plot(x, y, label='Average score')
 plt.setp(line1, linewidth=0.6, color='#0055FF')
 plt.xlabel('Iteration')

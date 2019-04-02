@@ -68,5 +68,5 @@ plt.yticks()
 plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
 plt.show()
 
-fig.savefig("pi_mc.pdf", bbox_inches='tight')
-fig.savefig("pi_mc.eps", bbox_inches='tight')
+fig.savefig("pi_mc.pdf")
+fig.savefig("pi_mc.eps")
