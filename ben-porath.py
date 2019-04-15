@@ -42,7 +42,7 @@ plt.rcParams.update({'font.size': 10})
 plt.rcParams.update({'figure.titlesize': 14})
 
 i = 0
-for z in [0.38, 0.45, 0.5]:
+for z in theta_list:
     h, s, w = benporath(z, 0.71, 0.75, 0.05, 0.06)
     plt.suptitle('Ben-Porath (1967) model of human capital in a life-cycle')
     plt.subplot(1, 3, 1)
