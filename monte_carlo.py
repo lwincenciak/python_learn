@@ -82,7 +82,7 @@ plt.rcParams.update({'font.size': 12})
 
 fig = plt.figure(figsize=(12, 8))
 plt.xlim(0, iterations)
-#plt.ylim(3.40, 3.60)
+# plt.ylim(3.40, 3.60)
 line1 = plt.plot(x, y, label='Average score')
 plt.setp(line1, linewidth=0.6, color='#0055FF')
 plt.xlabel('Iteration')
