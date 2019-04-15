@@ -11,6 +11,7 @@ d = 0.06
 s0 = 1
 theta_list = [0.38, 0.45, 0.5]
 colors = ['#0088EE', '#00DD33', '#FF3322']
+old_colors = ['#0099EE', '#0055DD', '#001188']
 
 
 def benporath(z, a, A, r, d):
