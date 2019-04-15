@@ -14,7 +14,7 @@ colors = ['#0088EE', '#00DD33', '#FF3322']
 
 
 def benporath(z, a, A, r, d):
-    h_values = [h0]
+    h_values = []
     s_values = []
     w_values = []
     h = h0
