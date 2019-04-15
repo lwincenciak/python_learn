@@ -10,7 +10,7 @@ def silnia(n):
 
 
 match_length = 90
-b = 46 / 16  # Barcelona currently
+b = 50 / 18  # Barcelona currently
 
 # p_values = [0]  # empty list
 goals_list = [0, 1, 2, 3, 4]
@@ -25,7 +25,7 @@ def poisson(g):
     return p_values
 
 
-fig = plt.figure(figsize=(11, 8))
+fig = plt.figure(figsize=(12, 8))
 plt.xlim(0, match_length)
 # plt.ylim(3.35, 3.65)
 
@@ -40,7 +40,7 @@ for g in goals_list:
 plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
 plt.xlabel('Time [t]')
 plt.ylabel('')
-plt.title('Probability of scoring given number of goals\n by Barcelona during a game')
+# plt.title('Probability of scoring given number of goals\n by Barcelona during a game')
 plt.legend()
 plt.show()
-fig.savefig("poisson.pdf")
+fig.savefig("poisson.eps")
