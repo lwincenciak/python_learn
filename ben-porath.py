@@ -34,22 +34,14 @@ def benporath(z, a, A, r, d):
     return h_values, s_values, w_values
 
 
-<<<<<<< HEAD
 fig = plt.figure(figsize=(24, 6))
-=======
-fig = plt.figure(figsize=(16, 6))
->>>>>>> 5c2efd4793b85c1b3ebcba85072dffa36a7e62a3
 plt.xlim(0, T)
 # plt.ylim(3.35, 3.65)
 
 plt.rcParams.update({'font.size': 14})
 
 i = 0
-<<<<<<< HEAD
 for z in [0.38, 0.45, 0.5]:
-=======
-for z in theta_list:
->>>>>>> 5c2efd4793b85c1b3ebcba85072dffa36a7e62a3
     h, s, w = benporath(z, 0.71, 0.75, 0.05, 0.06)
     plt.suptitle('Ben-Porath model of human capital in a life-cycle')
     plt.subplot(1, 3, 1)
