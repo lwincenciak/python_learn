@@ -5,6 +5,7 @@ import sys
 
 iterations = 1000
 n = 9999
+# definitions
 
 
 def my_print(text):
