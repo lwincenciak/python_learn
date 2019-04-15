@@ -34,7 +34,7 @@ def benporath(z, a, A, r, d):
     return h_values, s_values, w_values
 
 
-fig = plt.figure(figsize=(24, 6))
+fig = plt.figure(figsize=(16, 6))
 plt.xlim(0, T)
 # plt.ylim(3.35, 3.65)
 
