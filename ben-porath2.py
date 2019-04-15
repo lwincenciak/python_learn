@@ -34,33 +34,23 @@ def benporath(z, a, A, r, d):
     return h_values, s_values, w_values
 
 
-fig = plt.figure(figsize=(24, 6))
+fig = plt.figure(figsize=(12, 12))
 plt.xlim(0, T)
 # plt.ylim(3.35, 3.65)
 
 plt.rcParams.update({'font.size': 14})
 
-i = 0
-for z in [0.38, 0.45, 0.5]:
-    h, s, w = benporath(z, 0.71, 0.75, 0.05, 0.06)
-    plt.suptitle('Ben-Porath model of human capital in a life-cycle')
-    plt.subplot(1, 3, 1)
-    plt.plot(s, linewidth=2.5, color=colors[i], label='$\\theta = $' + str(z))
-    plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
-    plt.xlabel('Years [t]')
-    plt.ylabel('s(t)')
-    plt.subplot(1, 3, 2)
-    plt.plot(h, linewidth=2.5, color=colors[i], label='$\\theta = $' + str(z))
-    plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
-    plt.xlabel('Years [t]')
-    plt.ylabel('h(t)')
-    plt.subplot(1, 3, 3)
-    plt.plot(w, linewidth=2.5, color=colors[i], label='$\\theta = $' + str(z))
-    plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
-    plt.xlabel('Years [t]')
-    plt.ylabel('w(t)')
-    i += 1
+h1, s1, w1 = benporath(0.5, 0.71, 0.75, 0.05, 0.06)
+h2, s2, w2 = benporath(0.5, 0.71, 0.75, 0.05, 0.07)
+h3, s3, w3 = benporath(0.5, 0.71, 0.75, 0.05, 0.08)
 
+plt.plot(s1, linewidth=2.5, color=colors[0])
+plt.plot(s2, linewidth=2.5, color=colors[1])
+plt.plot(s3, linewidth=2.5, color=colors[2])
+
+plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
+plt.xlabel('Years [t]')
+plt.ylabel('s(t)')
 plt.legend()
 plt.show()
 fig.savefig("benporath.pdf")
