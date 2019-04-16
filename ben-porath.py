@@ -72,4 +72,4 @@ for z in theta_list:
 plt.subplots_adjust(left=0.05, right=0.95, top=0.83, bottom=0.15)
 plt.show()
 fig.savefig("benporath.pdf")
-fig.savefig("benporath.eps")
+# fig.savefig("benporath.eps")
