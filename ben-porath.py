@@ -35,6 +35,11 @@ def benporath(z, a, A, r, d):
     return h_values, s_values, w_values
 
 
+h, s, w = benporath(0.5, 0.71, 0.75, 0.05, 0.06)
+
+for time in range(T + 1):
+    print(str(time) + ': ' + str(s[time]))
+
 fig = plt.figure(figsize=(14, 4))
 plt.xlim(0, T)
 # plt.ylim(3.35, 3.65)
