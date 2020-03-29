@@ -89,7 +89,7 @@ inter_pars = [0.6, 0.5, 0.44]
 
 i = 0
 for z in inter_times:
-    S, E, Inf, R, F, D, Severe, Severe_H = seir_epi(Poland, z, 0.42)
+    S, E, Inf, R, F, D, Severe, Severe_H = seir_epi(Poland, z, 0.41)
     plt.suptitle('SEIR model of epidemic')
     plt.subplot(1, 3, 1)
     plt.plot(Inf, linewidth=1.5, color=kolory[i], label='$t = $' + str(z))
