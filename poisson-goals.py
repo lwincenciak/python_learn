@@ -10,7 +10,11 @@ def silnia(n):
 
 
 match_length = 90
+<<<<<<< HEAD
 b = 42 / 17  # Liverpool currently
+=======
+b = 42 / 17  # Barcelona currently
+>>>>>>> 48be04d12532ceeeed368d1f1eb70ca383b39bf9
 
 # p_values = [0]  # empty list
 goals_list = [0, 1, 2, 3, 4]
@@ -40,7 +44,11 @@ for g in goals_list:
 plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
 plt.xlabel('Time [t]')
 plt.ylabel('')
+<<<<<<< HEAD
 plt.title('Probability of scoring given number of goals\n by Liverpool during a game')
+=======
+plt.title('Probability of scoring given number of goals\n by Liverpool during a game\n with an average of 2.47 per game')
+>>>>>>> 48be04d12532ceeeed368d1f1eb70ca383b39bf9
 plt.legend()
 plt.show()
 fig.savefig("poisson.pdf")
