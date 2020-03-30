@@ -85,11 +85,11 @@ plt.rcParams.update({'font.size': 12})
 plt.rcParams.update({'figure.titlesize': 16})
 
 inter_times = [70, 75, 80]
-inter_pars = [0.6, 0.5, 0.44]
+inter_pars = [1, 1, 1]
 
 i = 0
 for z in inter_times:
-    S, E, Inf, R, F, D, Severe, Severe_H = seir_epi(Poland, z, 0.41)
+    S, E, Inf, R, F, D, Severe, Severe_H = seir_epi(Poland, z, 1)
     plt.suptitle('SEIR model of epidemic')
     plt.subplot(1, 3, 1)
     plt.plot(Inf, linewidth=1.5, color=kolory[i], label='$t = $' + str(z))
