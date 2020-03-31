@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
 
-# definition of parameters
-T = 400
+# wartosci parametrow
+T = 300
 D_incubation = 5.2
 D_infectious = 2.9
 D_death = 18
@@ -17,13 +17,10 @@ p_severe = 0.19
 p_fatal = 0.02
 p_mild = 1 - p_severe - p_fatal
 r0 = 2.2
-Poland = 38000000
+pop = 10e6
 
 colors = ['#ffe6cc', '#FF3322', '#0088EE', '#001188']
 kolory = ['#ff1111', '#11ff11', '#0088EE']
-
-# beta = r0 / D_infectious
-pop = Poland
 
 
 def f(x, t, t_inter, t_parm):
@@ -103,7 +100,7 @@ for z in int_time_list:
     ax3.get_yaxis().set_major_formatter(plt.FuncFormatter(lambda x, loc: "{:,}".format(int(x))))
     i += 1
 
-# plt.tight_layout()
+plt.tight_layout()
 plt.show()
 fig.savefig("seir_ode_epid.pdf")
 fig.savefig("seir_ode_epid.eps")
@@ -152,7 +149,7 @@ for z in int_parm_list:
     ax3.get_yaxis().set_major_formatter(plt.FuncFormatter(lambda x, loc: "{:,}".format(int(x))))
     j += 1
 
-# plt.tight_layout()
+plt.tight_layout()
 plt.show()
 fig.savefig("seir_ode_epid2.pdf")
 fig.savefig("seir_ode_epid2.eps")
