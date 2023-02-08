@@ -9,8 +9,6 @@ fx = 5
 t = 1.15
 colors = ['#0088EE', '#00DD33', '#FF3322', '#bbaa00']
 
-fpl_list = [3, 4, 5]
-
 # critical fi
 fi_dom = (fpl / B) ** (1 / (epsilon - 1))
 fi_exp = (fx / (B * (t ** (1 - epsilon)))) ** (1 / (epsilon - 1))
@@ -81,7 +79,7 @@ font = {'family': 'arial',
 plt.rcParams.update({'font.size': 10})
 
 # Plot profit lines
-fig, ax = plt.subplots(figsize=(12, 6))
+fig, ax = plt.subplots(figsize=(11, 6))
 ax.plot(x, pi_dom1, linewidth=2, color=colors[0], label="Domestic")
 ax.plot(x, pi_exp1, linewidth=2, color=colors[1], label="Exports")
 ax.plot(x, pi_fdi1, linewidth=2, color=colors[2], label="FDI")
@@ -136,37 +134,3 @@ yticks[2].set_visible(False)
 plt.legend(bbox_to_anchor=(0.05, 0.5), loc="center left", fontsize=8)
 plt.show()
 fig.savefig("fdi_exports.pdf")
-
-# set of 3 graphs
-fig2 = plt.figure(figsize=(14, 4))
-
-i = 0
-for k in fpl_list:
-    pi_dom1, pi_exp1, pi_fdi1, pi_total1, x = profit(A, epsilon, k, fx, t)
-    plt.suptitle('Productivity and firm organization')
-    plt.subplot(1, 3, 1)
-    plt.plot(x, pi_dom1, linewidth=1.5, color=colors[i], label='$f_{pl} = $' + str(k))
-    plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
-    plt.title('Profit Domestic')
-    plt.legend()
-    plt.xlabel('$\\varphi$')
-    plt.ylabel('$\\pi_{dom}$')
-    plt.subplot(1, 3, 2)
-    plt.plot(x, pi_fdi1, linewidth=1.5, color=colors[i], label='$f_{pl} = $' + str(k))
-    plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
-    plt.title('Profit FDI')
-    plt.legend()
-    plt.xlabel('$\\varphi$')
-    plt.ylabel('$\\pi_{FDI}$')
-    plt.subplot(1, 3, 3)
-    plt.plot(x, pi_total1, linewidth=1.5, color=colors[i], label='$f_{pl} = $' + str(k))
-    plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
-    plt.title('Total profit')
-    plt.legend()
-    plt.xlabel('$\\varphi$')
-    plt.ylabel('$\\pi_{tot}$')
-    i += 1
-
-plt.subplots_adjust(left=0.05, right=0.95, top=0.83, bottom=0.15)
-plt.show()
-fig.savefig("profits_t.pdf")
