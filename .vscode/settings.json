@@ -1,0 +1,17 @@
+{
+    "cSpell.ignoreWords": [
+        "Porath",
+        "benporath"
+    ],
+    "cSpell.words": [
+        "titlesize",
+        "xlim",
+        "ylim"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.rulers": [
+        120
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
+}

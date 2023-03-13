@@ -21,11 +21,11 @@ def benporath(z, a, A, r, d):
     h = h0
     s = s0
     for t in range(T + 1):
-        lam = (A * np.exp(-r * t)) * (1 - np.exp(-(r + d) * (T - t))) / (r + d)
+        lam = (A * np.exp(-r * t)) * (1 - np.exp(-(r + d) * (T - t))) / (r + d) # type: ignore
         if lam == 0:
             sh = 0
         else:
-            sh = ((A * np.exp(-r * t)) / (a * z * lam)) ** (1 / (a - 1))
+            sh = ((A * np.exp(-r * t)) / (a * z * lam)) ** (1 / (a - 1)) # type: ignore
         s = min(1, (sh / h))
         h = h + z * (h * s) ** a - d * h
         w = A * (1 - s) * h

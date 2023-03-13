@@ -31,7 +31,7 @@ for r in r_list:
 plt.grid(True, 'major', 'both', ls='--', lw=.5, c='k', alpha=.3)
 plt.xlabel('Time [t]')
 plt.ylabel('')
-plt.title('Time series for different r parameter\n$x_{t+1} = k x_t (1 - x_t)$')
+plt.title('Time series for different r parameter\n$x_{t+1} = r x_t (1 - x_t)$')
 plt.legend()
 plt.show()
 fig.savefig("chaos.pdf", bbox_inches='tight')
