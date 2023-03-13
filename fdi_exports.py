@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-# definition of parameters
+# definition of parameters of the model
 B = 1
 epsilon = 3
 A = B * (epsilon ** epsilon) / (epsilon - 1) ** (epsilon - 1)
